@@ -1,7 +1,8 @@
 # Exercise 1 Description
 
 ## Overview
-In this exercise, you will practice Test-Driven Development (TDD) while refactoring a simple bank account system (seen in class) to make it more flexible and open to future changes.
+In this exercise, you will practice Test-Driven Development (TDD) while refactoring a simple bank
+account system (seen in class) to make it more flexible and open to future changes.
 
 ## Starting Code
 You are given two classes:
