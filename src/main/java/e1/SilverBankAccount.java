@@ -3,9 +3,11 @@ package e1;
 public class SilverBankAccount implements BankAccount {
 
     private final CoreBankAccount base;
+    private final int fee;
 
     public SilverBankAccount(CoreBankAccount coreBankAccount) {
         this.base = coreBankAccount;
+        this.fee = 1;
     }
 
     @Override
@@ -23,6 +25,6 @@ public class SilverBankAccount implements BankAccount {
         if (this.getBalance() < amount){
             throw new IllegalStateException();
         }
-        base.withdraw(amount + 1);
+        base.withdraw(amount + this.fee);
     }
 }
