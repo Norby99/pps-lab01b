@@ -13,6 +13,6 @@ public class BankAccountFactory {
     }
 
     public BankAccount createBronzeAccount() {
-        return new CustomFeeBankAccountDecorator(new CoreBankAccount(), amount -> amount < 100 ? 0 : 1);
+        return new CustomFeeBankAccountDecorator(new CoreBankAccount(), new BronzeFeeCalculator());
     }
 }
