@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 public class BronzeBankAccountTest extends BankAccountTest {
     @Override
     protected BankAccount initializeAccount() {
-        return new BronzeBankAccount(new CoreBankAccount());
+        BankAccountFactory bankAccountFactory = new BankAccountFactory();
+        return bankAccountFactory.createBronzeAccount();
     }
 
     @Test

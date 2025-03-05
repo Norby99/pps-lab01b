@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class SilverBankAccountTest extends BankAccountTest {
     @Override
     protected BankAccount initializeAccount() {
-        return new SilverBankAccount(new CoreBankAccount());
+        BankAccountFactory bankAccountFactory = new BankAccountFactory();
+        return bankAccountFactory.createSilverAccount();
     }
 
     @Test
