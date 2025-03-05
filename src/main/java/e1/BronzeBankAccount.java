@@ -1,10 +1,7 @@
 package e1;
 
-public class BronzeBankAccount extends FeeBankAccountDecorator {
-
-    private final static int FEE = 1;
-
+public class BronzeBankAccount extends CustomFeeBankAccountDecorator {
     public BronzeBankAccount(BankAccount base) {
-        super(base, FEE); // Silver ha una fee di 1
+        super(base, amount -> amount < 100 ? 0 : 1); // Silver ha una fee di 1
     }
 }
